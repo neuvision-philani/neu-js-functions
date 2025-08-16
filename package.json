@@ -1,8 +1,5 @@
 {
   "name": "@neuvision-philani/neuvision-functions-javascript",
   "version": "0.1.0",
-  "repository": "https://github.com/neuvision-philani/neuvision-functions-javascript.git",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "repository": "https://github.com/neuvision-philani/neuvision-functions-javascript.git"
 }
