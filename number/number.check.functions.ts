@@ -82,6 +82,6 @@ function checkIfValidNumber(value: any): boolean {
 /** EXPORT SECTION
  * **************************************** */
 export {
-  checkIfNumberIsNull as isNull,
+  checkIfNumberIsNull as valueIsNull,
   checkIfValidNumber as isValidNumber,
 }

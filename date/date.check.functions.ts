@@ -74,6 +74,6 @@ function checkIfValidDate(value: any): boolean {
 /** EXPORT SECTION
  * **************************************** */
 export {
-  checkIfDateIsNull as isNull,
+  checkIfDateIsNull as valueIsNull,
   checkIfValidDate as isValid,
 }

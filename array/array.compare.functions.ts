@@ -5,7 +5,7 @@ import * as FunctionsArrayCheck from './array.check.functions';
 /** LOCAL SECTION
  * **************************************** */
 function compareTwoArrayObjects(array_01: any[], array_02: any[]): boolean {
-  if (FunctionsArrayCheck.isNull(array_01) || !FunctionsArrayCheck.isNull(array_02)) { return false; }
+  if (FunctionsArrayCheck.valueIsNull(array_01) || !FunctionsArrayCheck.valueIsNull(array_02)) { return false; }
 
   if (array_01.length !== array_02.length) { return false; }
 

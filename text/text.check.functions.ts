@@ -37,7 +37,7 @@
 function checkIfTextIsNull(value: any, nullValue: string = ''): boolean {
   try {
     return value === null || value === undefined || !checkIfValidString(value) || value === '' || value === nullValue;
-  } catch(err) { console.log('ERROR FOUND: ', err); return true; }
+  } catch (err) { console.log('ERROR FOUND: ', err); return true; }
 }
 
 /** checkIfValidString
@@ -77,7 +77,6 @@ function checkIfValidString(value: any): boolean {
 /** EXPORT SECTION
  * **************************************** */
 export {
-  checkIfTextIsNull as isNull,
   checkIfTextIsNull as valueIsNull,
   checkIfValidString as isValid,
 }

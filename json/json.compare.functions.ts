@@ -40,7 +40,7 @@ import * as FunctionsTextConfigure from '../text/text.configure.functions';
 function compareTwoJSONObjects(object_01: any, object_02: any): boolean {
   try {
     // Check if both arguments are objects
-    if (!FunctionsJSONCheck.isNull(object_01) && !FunctionsJSONCheck.isNull(object_02)) {
+    if (!FunctionsJSONCheck.valueIsNull(object_01) && !FunctionsJSONCheck.valueIsNull(object_02)) {
       // Get the keys of both objects
       const keys1 = Object.keys(object_01);
       const keys2 = Object.keys(object_02);

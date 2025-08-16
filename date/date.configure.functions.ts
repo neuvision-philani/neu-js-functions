@@ -1,6 +1,6 @@
 /** IMPORTS SECTION
  * **************************************** */
-import { isNull as checkIfDateIsNull } from '../date/date.check.functions';
+import { valueIsNull as checkIfDateIsNull } from '../date/date.check.functions';
 import { monthsList } from '../date/date.get.functions';
 import * as FunctionsNumberConfigure from '../number/number.configure.functions';
 import * as FunctionsTextConfigure from '../text/text.configure.functions';

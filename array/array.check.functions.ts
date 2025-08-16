@@ -11,7 +11,6 @@ function checkIfValidArrayObject(value: any): boolean {
 /** EXPORT SECTION
  * **************************************** */
 export {
-  checkIfArrayObjectIsNull as isNull,
   checkIfArrayObjectIsNull as valueIsNull,
   checkIfValidArrayObject as isValidArrayObject,
 }

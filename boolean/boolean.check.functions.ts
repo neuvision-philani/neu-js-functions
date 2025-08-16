@@ -81,7 +81,6 @@ function checkIfValidBooleanFlag(value: any): boolean {
 /** EXPORT SECTION
  * **************************************** */
 export {
-  checkIfBooleanIsNull as isNull,
   checkIfBooleanIsNull as valueIsNull,
   checkIfValidBooleanFlag as isValid,
 }

@@ -5,7 +5,7 @@ import * as FunctionsArrayCheck from './array.check.functions';
 /** LOCAL SECTION
  * **************************************** */
 function configureNullFallbackValue(value: any[], fallbackValue: any[] = [], splice: boolean = false): any[] {
-  return FunctionsArrayCheck.isNull(value)
+  return FunctionsArrayCheck.valueIsNull(value)
     ? splice
       ? [...fallbackValue]
       : fallbackValue

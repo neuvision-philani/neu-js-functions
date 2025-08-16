@@ -69,7 +69,7 @@ function configureTextForSearch(value: string, makeUpperCase: boolean = false): 
  * `configureTextFallbackValue(null, 'default text')` would return 'default text'.
  * **************************************** */
 function configureTextFallbackValue(value: any, fallbackValue: string = ""): string {
-  return FunctionsTextCheck.isNull(value) ? fallbackValue : value;
+  return FunctionsTextCheck.valueIsNull(value) ? fallbackValue : value;
 }
 
 /** configureTextMultiply
@@ -140,7 +140,7 @@ function configureTextMultiply(valueToMultiply: string, multiplyAmount: number =
  * * 03: `replaceText('Hello World', 'world', 'Universe', false, true)` would return 'Hello Universe', demonstrating case-insensitive replacement.
  * **************************************** */
 function replaceText(originalText: string, textToReplace: string, textToReplaceWith: string, replaceAllOccurences: boolean = false, ignoreCase: boolean = false) {
-  if (FunctionsTextCheck.isNull(originalText) || FunctionsTextCheck.isNull(textToReplace)) { return originalText; }
+  if (FunctionsTextCheck.valueIsNull(originalText) || FunctionsTextCheck.valueIsNull(textToReplace)) { return originalText; }
 
   let flags = '';
   if (replaceAllOccurences) { flags += 'g' };

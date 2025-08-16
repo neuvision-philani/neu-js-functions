@@ -7,7 +7,7 @@ import * as FunctionsJSONCheck from '../json/json.check.functions';
  * ? - `Description`:
  * ****************************************
  * Configures a fallback value for a JSON value if it is 'null'.
- * It first checks if the fallback value itself is 'null' using `FunctionsJSONCheck.isNull`,
+ * It first checks if the fallback value itself is 'null' using `FunctionsJSONCheck.valueIsNull`,
  * and then applies the fallback if the main value is 'null'.
  *
  * ? - `Parameters`:
@@ -35,11 +35,11 @@ import * as FunctionsJSONCheck from '../json/json.check.functions';
  * **************************************** */
 function configureFallbackIfJSONValueIsNull(value: any, fallbackValue: any = null): any {
   try {
-    const methFallbackValue = FunctionsJSONCheck.isNull(fallbackValue)
+    const methFallbackValue = FunctionsJSONCheck.valueIsNull(fallbackValue)
       ? null
       : fallbackValue;
 
-    return FunctionsJSONCheck.isNull(value) ? methFallbackValue : value;
+    return FunctionsJSONCheck.valueIsNull(value) ? methFallbackValue : value;
   } catch (err) { console.log('ERROR FOUND: ', value); return null; }
 }
 

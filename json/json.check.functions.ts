@@ -208,25 +208,25 @@ function checkJSONHasFieldAndFieldValueIsNotNull(jsonObject: any, fieldName: str
 
   switch (methFieldDataType) {
     case "array":
-      return !FunctionsArrayCheck.isNull(methFieldValue);
+      return !FunctionsArrayCheck.valueIsNull(methFieldValue);
     case "boolean":
     case "flag":
     case "switch":
-      return !FunctionsBooleanCheck.isNull(methFieldValue);
+      return !FunctionsBooleanCheck.valueIsNull(methFieldValue);
     case "date":
-      return !FunctionsDateCheck.isNull(methFieldValue);
+      return !FunctionsDateCheck.valueIsNull(methFieldValue);
     case "json":
     case "object":
     case "json-object":
       return !checkIfJSONIsNull(methFieldValue);
     case "number":
     case "digit":
-      return !FunctionsNumberCheck.isNull(methFieldValue);
+      return !FunctionsNumberCheck.valueIsNull(methFieldValue);
     case "string":
     case "text":
-      return !FunctionsTextCheck.isNull(methFieldValue);
+      return !FunctionsTextCheck.valueIsNull(methFieldValue);
     default:
-      return !FunctionsAnyCheck.isNull(methFieldValue);
+      return !FunctionsAnyCheck.valueIsNull(methFieldValue);
   }
 }
 

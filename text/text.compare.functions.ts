@@ -40,7 +40,7 @@ function compareTwoTextValues(text_01: string, text_02: string, normalize = true
     let methText_01 = FunctionsTextConfigure.nullText(text_01);
     let methText_02 = FunctionsTextConfigure.nullText(text_02);
 
-    if (FunctionsTextCheck.isNull(methText_01) && FunctionsTextCheck.isNull(methText_02)) { return true; }
+    if (FunctionsTextCheck.valueIsNull(methText_01) && FunctionsTextCheck.valueIsNull(methText_02)) { return true; }
 
     if (normalize) {
       methText_01 = FunctionsTextConfigure.textForSearch(methText_01);
@@ -48,7 +48,7 @@ function compareTwoTextValues(text_01: string, text_02: string, normalize = true
     }
 
     return methText_01 === methText_02;
-  } catch(err) { console.log('ERROR ENCOUNTERED!', err); return false; }
+  } catch (err) { console.log('ERROR ENCOUNTERED!', err); return false; }
 }
 
 /** EXPORT SECTION

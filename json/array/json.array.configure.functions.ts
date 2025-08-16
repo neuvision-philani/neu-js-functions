@@ -50,22 +50,22 @@ function jsonArraySortField(array: any[], fieldName: string, fieldNameDataType: 
 
   switch (methFieldNameDataType) {
     case 'boolean':
-      considerAllValue.forEach((forEachItem) => { methConsiderAllValue.push(FunctionsBooleanCheck.isNull(forEachItem) ? false : forEachItem); });
+      considerAllValue.forEach((forEachItem) => { methConsiderAllValue.push(FunctionsBooleanCheck.valueIsNull(forEachItem) ? false : forEachItem); });
       break;
     case 'date':
-      considerAllValue.forEach((forEachItem) => { methConsiderAllValue.push(FunctionsDateCheck.isNull(forEachItem) ? 0 : forEachItem.getTime()); });
+      considerAllValue.forEach((forEachItem) => { methConsiderAllValue.push(FunctionsDateCheck.valueIsNull(forEachItem) ? 0 : forEachItem.getTime()); });
       break;
     case 'number':
-      considerAllValue.forEach((forEachItem) => { methConsiderAllValue.push(FunctionsNumberCheck.isNull(forEachItem) ? 0 : forEachItem); });
+      considerAllValue.forEach((forEachItem) => { methConsiderAllValue.push(FunctionsNumberCheck.valueIsNull(forEachItem) ? 0 : forEachItem); });
       break;
     case 'string':
     case 'text':
       considerAllValue.forEach((forEachItem) => {
-        methConsiderAllValue.push(FunctionsTextCheck.isNull(forEachItem) ? '' : normalize ? FunctionsTextConfigure.textForSearch(forEachItem) : forEachItem);
+        methConsiderAllValue.push(FunctionsTextCheck.valueIsNull(forEachItem) ? '' : normalize ? FunctionsTextConfigure.textForSearch(forEachItem) : forEachItem);
       });
       break;
     default:
-      considerAllValue.forEach((forEachItem) => { methConsiderAllValue.push(FunctionsAnyCheck.isNull(forEachItem) ? null : forEachItem); });
+      considerAllValue.forEach((forEachItem) => { methConsiderAllValue.push(FunctionsAnyCheck.valueIsNull(forEachItem) ? null : forEachItem); });
       break;
   }
   // console.log('methConsiderAllValue: ', methConsiderAllValue);
@@ -81,20 +81,20 @@ function jsonArraySortField(array: any[], fieldName: string, fieldNameDataType: 
 
       switch (methFieldNameDataType) {
         case 'boolean':
-          sortMeFieldValue = FunctionsBooleanCheck.isNull(methFieldValue) ? false : methFieldValue;
+          sortMeFieldValue = FunctionsBooleanCheck.valueIsNull(methFieldValue) ? false : methFieldValue;
           break;
         case 'date':
-          sortMeFieldValue = FunctionsDateCheck.isNull(methFieldValue) ? 0 : methFieldValue.getTime();
+          sortMeFieldValue = FunctionsDateCheck.valueIsNull(methFieldValue) ? 0 : methFieldValue.getTime();
           break;
         case 'number':
-          sortMeFieldValue = FunctionsNumberCheck.isNull(methFieldValue) ? 0 : methFieldValue;
+          sortMeFieldValue = FunctionsNumberCheck.valueIsNull(methFieldValue) ? 0 : methFieldValue;
           break;
         case 'string':
         case 'text':
-          sortMeFieldValue = FunctionsTextCheck.isNull(methFieldValue) ? '' : normalize ? FunctionsTextConfigure.textForSearch(methFieldValue) : methFieldValue;
+          sortMeFieldValue = FunctionsTextCheck.valueIsNull(methFieldValue) ? '' : normalize ? FunctionsTextConfigure.textForSearch(methFieldValue) : methFieldValue;
           break;
         default:
-          sortMeFieldValue = FunctionsAnyCheck.isNull(methFieldValue) ? null : methFieldValue;
+          sortMeFieldValue = FunctionsAnyCheck.valueIsNull(methFieldValue) ? null : methFieldValue;
           break;
       }
 
@@ -131,7 +131,7 @@ function jsonArraySortField(array: any[], fieldName: string, fieldNameDataType: 
     }
   }
 
-  if (!FunctionsArrayCheck.isNull(methArrayTopRecords)) { methArrayTopRecords.forEach((argTopRecord) => { returnValue.unshift({ ...argTopRecord }); }); }
+  if (!FunctionsArrayCheck.valueIsNull(methArrayTopRecords)) { methArrayTopRecords.forEach((argTopRecord) => { returnValue.unshift({ ...argTopRecord }); }); }
 
   return returnValue;
 }

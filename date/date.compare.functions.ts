@@ -31,8 +31,8 @@ import * as FunctionsDateCheck from './date.check.functions';
  * * 02: `compareTwoDateValues(new Date('2023-11-28'), new Date('2023-11-29'))` would return `false`, as the dates are different.
  * **************************************** */
 function compareTwoDateValues(date_01: Date, date_02: Date) {
-  if (!FunctionsDateCheck.isNull(date_01) && !FunctionsDateCheck.isNull(date_02)) {
-      return date_01.getTime() === date_02.getTime();
+  if (!FunctionsDateCheck.valueIsNull(date_01) && !FunctionsDateCheck.valueIsNull(date_02)) {
+    return date_01.getTime() === date_02.getTime();
   }
 
   return false;
@@ -76,9 +76,9 @@ function compareTwoDateValues(date_01: Date, date_02: Date) {
 function compareIfDateIsNull(value: any, nullValue: any = null): boolean {
   try {
     return (
-      !FunctionsDateCheck.isNull(nullValue)
-        ? FunctionsDateCheck.isNull(value)
-        : FunctionsDateCheck.isNull(value) || compareTwoDateValues(value, nullValue)
+      !FunctionsDateCheck.valueIsNull(nullValue)
+        ? FunctionsDateCheck.valueIsNull(value)
+        : FunctionsDateCheck.valueIsNull(value) || compareTwoDateValues(value, nullValue)
     );
   } catch (err) { console.log('ERROR FOUND: ', err); return true; }
 }

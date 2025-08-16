@@ -6,7 +6,7 @@ import * as FunctionsNumberCheck from './number.check.functions';
  * ----------------------------------------
  * ? - `Description`:
  * ****************************************
- * Compares two numeric values for equality. The function first checks if both numbers are valid (i.e., not 'null' as defined by `FunctionsNumberCheck.isNull`) and then compares them for equality.
+ * Compares two numeric values for equality. The function first checks if both numbers are valid (i.e., not 'null' as defined by `FunctionsNumberCheck.valueIsNull`) and then compares them for equality.
  *
  * ? - `Parameters`:
  * ****************************************
@@ -32,12 +32,12 @@ import * as FunctionsNumberCheck from './number.check.functions';
  * **************************************** */
 function compareTwoNumbers(number_01: any, number_02: any): boolean {
   try {
-    if (!FunctionsNumberCheck.isNull(number_01) && !FunctionsNumberCheck.isNull(number_02)) {
+    if (!FunctionsNumberCheck.valueIsNull(number_01) && !FunctionsNumberCheck.valueIsNull(number_02)) {
       return number_01 === number_02;
     }
 
     return false;
-  } catch(err) { console.log('ERROR ENCOUNTERED - compareTwoNumbers!', err); return false; }
+  } catch (err) { console.log('ERROR ENCOUNTERED - compareTwoNumbers!', err); return false; }
 }
 
 /** EXPORT SECTION

@@ -49,25 +49,25 @@ function checkIfValueIsNull(value: any, dataType: string = "", minOrNullValue: a
 
   switch (dataType) {
     case "array":
-      return FunctionsArrayCheck.isNull(value);
+      return FunctionsArrayCheck.valueIsNull(value);
     case "boolean":
     case "flag":
     case "switch":
-      return FunctionsBooleanCheck.isNull(value);
+      return FunctionsBooleanCheck.valueIsNull(value);
     case "date":
-      return FunctionsDateCheck.isNull(value);
+      return FunctionsDateCheck.valueIsNull(value);
     case "json":
     case "object":
     case "json-object":
-      return FunctionsJSONCheck.isNull(value);
+      return FunctionsJSONCheck.valueIsNull(value);
     case "number":
     case "digit":
-      return FunctionsNumberCheck.isNull(value, minOrNullValue);
+      return FunctionsNumberCheck.valueIsNull(value, minOrNullValue);
     case "string":
     case "text":
-      return FunctionsTextCheck.isNull(value, minOrNullValue);
+      return FunctionsTextCheck.valueIsNull(value, minOrNullValue);
     default:
-      return FunctionsAnyCheck.isNull(value);
+      return FunctionsAnyCheck.valueIsNull(value);
   }
 }
 

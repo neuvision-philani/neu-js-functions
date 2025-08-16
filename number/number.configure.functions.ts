@@ -6,7 +6,7 @@ import * as FunctionsNumberCheck from './number.check.functions';
  * ----------------------------------------
  * ? - `Description`:
  * ****************************************
- * Evaluates a provided numeric value for nullness and returns either the original value or a specified fallback number. It uses `FunctionsNumberCheck.isNull` to determine if the value is 'null'.
+ * Evaluates a provided numeric value for nullness and returns either the original value or a specified fallback number. It uses `FunctionsNumberCheck.valueIsNull` to determine if the value is 'null'.
  * 
  * ? - `Parameters`: 
  * ****************************************
@@ -31,7 +31,7 @@ import * as FunctionsNumberCheck from './number.check.functions';
  * * 02: `configureNullNumber(5, 10)` would return `5`, as the original value is valid.
  * **************************************** */
 function configureNullNumber(value: any, fallbackValue: number = 0): number {
-  return FunctionsNumberCheck.isNull(value) ? fallbackValue : value;
+  return FunctionsNumberCheck.valueIsNull(value) ? fallbackValue : value;
 }
 
 /** configureNumberLength
@@ -65,7 +65,7 @@ function configureNullNumber(value: any, fallbackValue: number = 0): number {
  * * 02: `configureNumberLength(1234, 6, 'x')` would return 'xx1234', padding the number to a length of 6 with 'x'.
  * **************************************** */
 function configureNumberLength(value: number, digitLength: number = 0, characterToPadWith: string = '0') {
-  if (FunctionsNumberCheck.isNull(value, -1)) { return value + ''; }
+  if (FunctionsNumberCheck.valueIsNull(value, -1)) { return value + ''; }
 
   const methValue = configureNullNumber(value, 0);
   const methDigitLength = configureNullNumber(digitLength, 0);

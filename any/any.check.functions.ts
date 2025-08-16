@@ -7,6 +7,5 @@ function isAnyValueNull(value: any): boolean {
 /** EXPORT SECTION
  * **************************************** */
 export {
-  isAnyValueNull as isNull,
   isAnyValueNull as valueIsNull,
 }
