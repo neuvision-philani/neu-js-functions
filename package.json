@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "@neuvision-philani/neuvision-functions-javascript",
   "version": "0.1.2",
   "repository": "https://github.com/neuvision-philani/neuvision-functions-javascript.git",
