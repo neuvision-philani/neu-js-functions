@@ -1,4 +1,4 @@
-# neuvision-functions-javascript
+# neu-js-functions
 
 Reusable **JavaScript utility functions** for Angular and similar applications.  
 This package provides a collection of helper functions designed to streamline application development by promoting consistency, reducing duplication, and ensuring best practices.
@@ -8,10 +8,10 @@ This package provides a collection of helper functions designed to streamline ap
 ## 📦 Installation
 
 ```bash
-npm install neuvision-functions-javascript
+npm install neu-js-functions
 
 ```import syntax
-import { appFunctions } from 'neuvision-functions-javascript';
+import { appFunctions } from 'neu-js-functions';
 
 ## 📖 Introduction
 
