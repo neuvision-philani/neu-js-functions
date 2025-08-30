@@ -11,7 +11,10 @@ This package provides a collection of helper functions designed to streamline ap
 npm install neu-js-functions
 
 ```import syntax
-import { appFunctions } from 'neu-js-functions';
+import * as appFunctions from 'neu-js-functions';
+
+```example usage syntax
+appFunctions.text.check.valueIsNull('') - This will return null, as the text check is empty.
 
 ## 📖 Introduction
 
