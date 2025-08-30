@@ -1,6 +1,6 @@
 {
   "name": "neu-js-functions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Reusable **JavaScript utility functions** for Angular and similar applications.  \r This package provides a collection of helper functions designed to streamline application development by promoting consistency, reducing duplication, and ensuring best practices.",
   "license": "MIT",
   "author": "Philani C Mabuza",
