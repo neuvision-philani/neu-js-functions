@@ -1,0 +1,46 @@
+{
+  "name": "neu-js-functions",
+  "version": "1.0.1",
+  "description": "Reusable **JavaScript utility functions** for Angular and similar applications.  \r This package provides a collection of helper functions designed to streamline application development by promoting consistency, reducing duplication, and ensuring best practices.",
+  "license": "MIT",
+  "author": "Philani C Mabuza",
+  "keywords": [
+    "functions",
+    "utilities",
+    "helpers",
+    "javascript",
+    "angular",
+    "reusability",
+    "excel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neuvision-philani/neu-js-functions.git"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format cjs,esm --sourcemap",
+    "clean": "rimraf dist || rd /s /q dist",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  }
+}
